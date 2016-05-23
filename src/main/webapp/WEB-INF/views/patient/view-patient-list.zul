@@ -1,0 +1,65 @@
+<?page title="Dashboard - ZK Admin"?>
+<!-- Load Bootstrap  -->
+<?link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"?>
+
+<!-- Google Open Sans font -->
+<!-- Load fonts from local -->
+<?link href="css/fonts.css" rel="stylesheet" type="text/css"?>
+
+<!-- Unmark if we want to use fonts from google server
+	<?link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'?>
+-->
+
+<?link href="less/index.css.dsp" rel="stylesheet" type="text/css"?>
+
+<zk xmlns:n="native">
+
+
+	<include src="navbar.zul" />
+
+	<hlayout id="main" spacing="0">
+		<include src="sidebar.zul" />
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('demo.grid.dynamic_data.MailViewModel')">
+	
+		<separator />
+		Listes des patients : <label value="@load(vm.mailData.size)" />
+		<separator />
+		<grid height="550px" width="1150px" model="@load(vm.mailData.mails)"
+			emptyMessage="Nothing in Inbox.">
+			<columns>
+				<column label="Icon" width="50px" />
+				<column label="nom"  width="100px"/>
+				<column label="prenom" width="100px" />
+				<column label="CIN"  width="100px"/>
+				<column label="Adresse" width="160px" />
+				<column label="pays" width="90px" />
+				<column label="ville" width="90px" />
+				<column label="email"  width="130px"/>
+				<column label="pseudo" width="90px" />
+				<column label="mot de passe" width="100px" />
+				<column label="Action" width="80px" />
+			</columns>
+			<template name="model">
+				<row>
+					<image
+						src="assets/avatars/iconPatient.png" />
+					<label value="@load(each.subject)" />
+					<label value="@load(each.date)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<label value="@load(each.size)" />
+					<button label="Edit" onClick="@command('removeMail', mail=each)" />
+				</row>
+			</template>
+			
+		</grid>
+		
+	</window>
+	
+</hlayout>
+</zk>

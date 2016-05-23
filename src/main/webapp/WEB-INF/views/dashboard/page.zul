@@ -1,0 +1,47 @@
+<vlayout sclass="page-content" xmlns:n="native" spacing="0">
+  
+  <separator height="12px"/>
+  <html><br></br></html>
+ 
+  <hlayout spacing="24px">
+  <label style="color:#1E7FCB;font-weight:bold;">HealthCare Admin:</label>
+ 
+
+  </hlayout>
+  
+  <html><br></br></html>
+  <html><br></br></html>
+  <html><br></br></html>
+  
+  <hlayout spacing="24px">
+<separator></separator>
+
+   <div sclass="text">
+               <image src="assets/avatars/valider.PNG"></image>     <span class="z-icon-quote-left"/>
+                   Dans cette partie notre système informatique permet au chef service de:  <html><br></br></html>
+                   *Gérer les staffs médicaux en ajoutant,modifiant et en supprimant des staffs médicaux.<html><br></br></html>
+                   *Gérer les patients en ajoutant des nouveaux patients.<html><br></br></html>
+                   *Affecter les staffs médicaux durant une période bien déterminé en jours ou en nuit.<html><br></br></html>
+                   *affecter des patients à des staffs médicaux durant une période bien déterminée<html><br></br></html>
+                   *contrôler le rendement des staffs médicaux durant une période.<html><br></br></html>
+                   * générer des rapports à propos de rendement d'un staff médical.<html><br></br></html>
+                   
+                  </div>
+
+     <separator></separator>
+   <image src="assets/avatars/gestion .jpg" width="290px" height="350px"></image> 
+  
+  </hlayout>
+ <hlayout></hlayout>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+<html><br></br></html>
+  
+</vlayout>

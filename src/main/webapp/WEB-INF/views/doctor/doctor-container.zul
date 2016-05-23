@@ -1,0 +1,175 @@
+<zk>
+
+
+	<style src="/widgets/input/form_sample/style.css" />
+	<div apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('demo.input.form_sample.FormViewModel')"
+		validationMessages="@id('vmsgs')"
+		form="@id('fx')  @load(vm.user) @save(vm.user, before='add')">
+
+		<html>
+			<center style="margin-right:500px;">
+				<h1>
+					<font color="#1E7FCB">
+						<image src="assets/avatars/homme.png"></image>
+						Ajouter un nouveau médecin
+					</font>
+				</h1>
+			</center>
+		</html>
+		<grid>
+			<rows>
+				<row>
+
+					<label value="Nom" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.lastName)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="Prénom" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.firstName)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="CIN" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.identityCardNumber)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="Téléphone" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.mobilePhoneNumber)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="image" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.photo)" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="adresse" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.address)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="pays" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.country)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="ville" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.town)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+
+					<label value="code Postal" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.postalCode)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="Pseudo" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.login)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="mot de passse" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+						<textbox type="password"
+							value="@bind(fx.password)" constraint="no empty" width="150px" />
+					</hlayout>
+
+				</row>
+
+
+
+
+				<row>
+					<label value="E-mail" width="150px"
+						style="margin-left:250px;" />
+					<hlayout>
+
+						<textbox value="@bind(fx.email)" width="150px" />
+						<label class="error"
+							value="@load(vmsgs['email'])" />
+					</hlayout>
+
+
+				</row>
+
+				<row>
+					<label value="Validation:" width="150px"
+						style="margin-left:250px;" />
+
+					<vlayout>
+						<hlayout>
+							<textbox value="@bind(vm.captchaInput)"
+								width="150px" />
+							<label class="error"
+								value="@load(vmsgs['captcha'])" />
+						</hlayout>
+						<hlayout>
+							<captcha value="@load(vm.captcha)"
+								bgColor="@load(vm.backgroundColour)"
+								fontColor="@load(vm.foregroundColour)" width="150px"
+								height="50px" frame="true" />
+							<vlayout>
+								<button label="Regenerate"
+									onClick="@command('regenerate')" width="100px" />
+								<hlayout>
+									<colorbox
+										value="@bind(vm.backgroundColour)" width="35px" />
+									<colorbox
+										value="@bind(vm.foregroundColour)" width="35px" />
+								</hlayout>
+							</vlayout>
+						</hlayout>
+					</vlayout>
+
+				</row>
+				<row>
+					<cell colspan="3" style="text-align:center">
+						<vlayout>
+							<button label="Submit"
+								onClick="@command('add')" width="100px" height="30px" />
+						</vlayout>
+					</cell>
+				</row>
+
+			</rows>
+		</grid>
+
+	</div>
+	<image src="assets/avatars/doctor.jpg" height="270px"
+		style="margin-left:720px;  margin-top:-600px;">
+	</image>
+</zk>

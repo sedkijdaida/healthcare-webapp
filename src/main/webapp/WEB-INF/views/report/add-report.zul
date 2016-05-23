@@ -1,0 +1,98 @@
+<?page title="Dashboard - ZK Admin"?>
+<!-- Load Bootstrap  -->
+<?link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"?>
+
+<!-- Google Open Sans font -->
+<!-- Load fonts from local -->
+<?link href="css/fonts.css" rel="stylesheet" type="text/css"?>
+
+<!-- Unmark if we want to use fonts from google server
+<?link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'?>
+-->
+
+<?link href="less/index.css.dsp" rel="stylesheet" type="text/css"?>
+
+<zk xmlns:n="native">
+
+
+	<include src="navbar.zul"/>     
+	      
+	<hlayout id="main" spacing="0">
+		<include src="sidebar.zul"/>    
+		
+<vlayout sclass="page-content" xmlns:n="native" spacing="0">
+<zk>
+
+		
+<style src="/widgets/input/form_sample/style.css" />
+	<div apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('demo.input.form_sample.ReportViewModel')"
+		validationMessages="@id('vmsgs')"
+		form="@id('fx') @load(vm.performanceReportDto) @save(vm.performanceReportDto, before='addReport')">
+		
+		<html><center style="margin-right:420px;"><h1><font color="#1E7FCB"><image src="assets/avatars/rapport.png"></image>Ajouter un Rapport</font> </h1></center></html>    
+		<grid>
+			<rows>
+				<row>
+				
+					<label value="titre" width="150px" style="margin-left:250px;"  />
+					<hlayout>
+						<textbox value="@bind(fx.title)"
+							constraint="no empty" width="150px"/>
+					</hlayout>
+				</row>
+
+						<row>
+					<label value="Description" width="150px" style="margin-left:250px;" />
+					<vlayout>
+						
+						<textbox rows="@load(vm.memoHeight)" value="@bind(fx.description)"
+							width="370px;" tabindex="11" />
+					</vlayout>
+					
+				</row>
+					<row>
+					<label value="Remarque" width="150px" style="margin-left:250px;" />
+					<vlayout>
+						
+						<textbox rows="@load(vm.memoHeight)" value="@bind(fx.notice)"
+							width="370px;" tabindex="11" />
+					</vlayout>
+					
+				</row>
+				<row>
+					<label value="Date" width="150px" style="margin-left:250px;" />
+					<hbox align="center">
+						<datebox value="@bind(fx.date)" 
+							format="@load(vm.dateFormat)" width="150px"  tabindex="7"/>
+					</hbox>
+
+				</row>
+				
+			
+				
+				<row>
+					<cell colspan="3" style="text-align:center">
+						<vlayout>
+							
+							<button label="Submit" onClick="@command('addReport')"
+								width="100px" height="30px" />
+						</vlayout>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		
+	</div>
+	<image src="assets/avatars/report.jpg" height="270px" style="margin-left:900px;  margin-top:-300px;"></image>
+	<html><br></br></html>
+	<html><br></br></html>
+	<html><br></br></html>
+	<html><br></br></html>
+</zk>
+</vlayout>
+
+	</hlayout>
+
+	
+</zk>

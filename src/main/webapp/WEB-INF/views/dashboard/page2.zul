@@ -1,0 +1,78 @@
+<vlayout sclass="page-content" xmlns:n="native" spacing="0">
+  
+  <separator height="12px"/>
+  <hlayout spacing="24px">
+  <label style="color:#1E7FCB;font-weight:bold;">Services offert par l'application:</label>
+ 
+
+  </hlayout>
+  <separator></separator>
+ <separator></separator>
+  <separator></separator>
+  
+  <hlayout spacing="24px">
+  <image src="assets/avatars/valider.PNG"></image><label style="color:#03224C;font-weight: bolder;">Suivie de patient :</label>
+
+   <div sclass="text">
+                    <span class="z-icon-quote-left"/>
+                   le suivie de patient est l'une des tâches le plus important dans la vie hospitaliére:<html><br></br></html>
+                   qui se base sur le prenez soin du patient durant son séjour dans l'hôpital.<html><br></br></html>
+                   Ce suivie se manifeste par la prise en charge de mesures de signes vitaux et<html><br></br></html>
+                   de contrôle de traitement toute la journée.
+                   
+                  </div>
+
+     
+   <image src="assets/avatars/suivi.jpg"></image> 
+  
+  </hlayout>
+  
+  
+   <html><br></br></html>
+  <html><br></br></html>
+  <html><br></br></html>
+  <hlayout spacing="24px">
+  
+  
+  <image src="assets/avatars/valider.PNG"></image><label style="color:#03224C;font-weight: bolder;">disponibilité de l'information du patient  :</label>
+  
+  <div sclass="text">
+  
+                    <span class="z-icon-quote-left"/>
+                  Grâce au nouvelle technologie utilisé dans <html><br></br></html>
+                   la vie hospitalière telque les tablettes <html><br></br></html>
+                   pour prendre enregistrer les mesures des <html><br></br></html>
+                   signes vitaux de patients et le traiments <html><br></br></html>
+                   prennes nous garantissons la<html><br></br></html>
+                    disponibilité des données à tout moment et en sécurité <html><br></br></html>
+                   pour prendre des décisions précis à propos de l'état de santé du patient et <html><br></br></html>
+                   garantir une meilleur qualité de service.<html><br></br></html>
+                  </div>
+
+     
+   <image src="assets/avatars/controle.jpg"></image>
+  </hlayout>
+   <html><br></br></html>
+  <html><br></br></html>
+  <html><br></br></html>
+  <hlayout spacing="24px">
+  
+  
+  <image src="assets/avatars/valider.PNG"></image><label style="color:#03224C;font-weight: bolder;">Affectation des patients à des staffs médicaux :</label>
+  
+  <div sclass="text">
+  
+                    <span class="z-icon-quote-left"/>
+                  Notre Système informatique permet aux staffs médicaux de <html><br></br></html>
+                   garantir une équitabilité des tâches entre <html><br></br></html>
+                   les staffs médicaux et pour garantir aussi une meilleur suivie du patient. <html><br></br></html>
+                   L'affectation se fait en deux étapes:<html><br></br></html>
+                   *l'affectation de staffs durant une période bien déterminée<html><br></br></html>
+                    *l'affectation des staffs médicaux à des patients  <html><br></br></html>
+              
+                  </div>
+
+     
+   <image src="assets/avatars/staff.jpg"></image>
+  </hlayout>
+</vlayout>

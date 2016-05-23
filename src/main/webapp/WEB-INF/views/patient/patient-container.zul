@@ -1,0 +1,108 @@
+<zk>
+
+		
+<style src="/widgets/input/form_sample/style.css" />
+	<div apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('demo.input.form_sample.PatientViewModel')"
+		validationMessages="@id('vmsgs')"
+		form="@id('fx') @load(vm.patientDto) @save(vm.patientDto, before='addPatient')">
+		
+		<html><center style="margin-right:500px;"><h1><font color="#1E7FCB"><image src="assets/avatars/patient.PNG"></image>Ajouter un nouveau patient</font> </h1></center></html>    
+		<grid>
+			<rows>
+				<row>
+				
+					<label value="Nom" width="150px" style="margin-left:250px;"  />
+					<hlayout>
+						<textbox value="@bind(fx.lastName)"
+							constraint="no empty" width="150px"/>
+					</hlayout>
+				</row>
+				<row>
+					<label value="Prénom" width="150px" style="margin-left:250px;"  />
+					<hlayout>
+						<textbox value="@bind(fx.firstName)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="CIN" width="150px" style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.identityCardNumber)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="Numero lit" width="150px" style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.bedNumber)"
+							constraint="no empty" width="150px" />
+					</hlayout>
+				</row>
+				<row>
+					<label value="image" width="150px" style="margin-left:250px;" />
+					<hlayout>
+						<textbox value="@bind(fx.photo)"
+							 width="150px" />
+					</hlayout>
+				</row>
+				
+				<row>
+				<label value="Bloc" width="150px" style="margin-left:250px;" />
+					<combobox id="cmbColor" width="150px" value="@bind(fx.bloc)">
+                
+						<comboitem label="A"/>
+						<comboitem label="B"/>
+						<comboitem label="C"/>
+                </combobox>
+				</row>
+
+				<row>
+				<label value="Validation:" width="150px" style="margin-left:250px;"/>
+					
+					<vlayout>
+						<hlayout>
+							<textbox value="@bind(vm.captchaInput)"
+								width="150px"  />
+							<label class="error"
+								value="@load(vmsgs['captcha'])" />
+						</hlayout>
+						<hlayout>
+							<captcha value="@load(vm.captcha)"
+								bgColor="@load(vm.backgroundColour)" 
+								fontColor="@load(vm.foregroundColour)"
+								width="150px" height="50px" 
+								frame="true" />
+							<vlayout>
+								<button label="Regenerate"
+									onClick="@command('regenerate')" width="100px" />
+								<hlayout>
+									<colorbox
+										value="@bind(vm.backgroundColour)" width="35px" />
+									<colorbox
+										value="@bind(vm.foregroundColour)" width="35px" />
+								</hlayout>
+							</vlayout>
+						</hlayout>
+					</vlayout>
+					
+				</row>
+				<row>
+					<cell colspan="3" style="text-align:center">
+						<vlayout>
+							
+							<button label="Submit" onClick="@command('addPatient')"
+								width="100px" height="30px" />
+						</vlayout>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+		
+	</div>
+	<image src="assets/avatars/patienthospital.PNG" height="270px" style="margin-left:720px;  margin-top:-500px;"></image>
+	<html><br></br></html>
+	<html><br></br></html>
+	<html><br></br></html>
+	<html><br></br></html>
+</zk>

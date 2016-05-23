@@ -1,0 +1,58 @@
+<div id="sidebar" sclass="sidebar" apply="applications2.SidebarComposer">
+	<!-- Shortcuts Button-->
+	<div class="shortcuts">
+		<!-- Display when expanded -->
+		<div class="shortcuts-expanded">
+			<button type="button" class="btn-success" iconSclass="z-icon-signal" href="service.zul"/>
+			<button type="button" class="btn-info" iconSclass="z-icon-pencil"/>
+			<button type="button" class="btn-warning" iconSclass="z-icon-group"/>
+			<button type="button" class="btn-danger" iconSclass="z-icon-cogs"/>
+		</div>
+		<!-- Display when collapsed -->
+		<div class="shortcuts-collapsed">
+			<button type="button" class="btn-success" />
+			<button type="button" class="btn-info"/>
+			<button type="button" class="btn-warning"/>
+			<button type="button" class="btn-danger"/>
+		</div>
+	</div>
+	<!-- Navigation List -->
+	<navbar id="navbar" sclass="nav-list" orient="vertical">
+		<navitem label="Acceuil" iconSclass="z-icon-desktop" selected="true" href="index.zul"/>
+		<nav label="Gestion des infirmiers" iconSclass="z-icon-cog icon-only">
+		    <navitem label="ajouter un infirmier" iconSclass="z-icon-check green bigger-110" href="addMaleNurse.zul"/>
+			<navitem label="modifier un infirmier" iconSclass="z-icon-pencil blue" href="dynamic_data.zul"/>
+			<navitem label="supprimer un infirmier" iconSclass="z-icon-trash-o red"/>
+			</nav>
+		
+		<nav label="Gestion des médecins" iconSclass="z-icon-cog icon-only">
+			<navitem label="ajouter un médecin" iconSclass="z-icon-check green bigger-110" href="addDoctor.zul"/>
+			<navitem label="modifier un médecin" iconSclass="z-icon-pencil blue"/>
+			<navitem label="supprimer un médecin" iconSclass="z-icon-trash-o red"/>
+		</nav>
+		<nav label="Gestion des patients" iconSclass="z-icon-cog icon-only">
+			<navitem label="ajouter un patient"  iconSclass="z-icon-check green bigger-110" href="addPatient.zul" />
+			<navitem label="modifier un patient" iconSclass="z-icon-pencil blue"/>
+			<navitem label="supprimer un patient" iconSclass="z-icon-trash-o red"/>
+		</nav>
+		<navitem label="Génerer un rapport" iconSclass="z-icon-list-alt" href="report.zul"/>
+		
+		<nav label="Affectation" iconSclass="z-icon-tag">
+			<navitem label="affectation pèriode" iconSclass="z-icon-angle-double-right"/>
+			<navitem label="affectation patient" iconSclass="z-icon-angle-double-right"/>
+			
+		</nav>
+		
+		<navitem label="Consulter rendement" iconSclass="z-icon-list-alt" />
+		
+	</navbar>
+	<!-- Toggler -->
+	<div sclass="sidebar-collapse">
+		<a id="toggler" iconSclass="z-icon-angle-double-left"/>
+	</div>
+	<!-- Tooptip for Calender Navitem -->
+	<popup id="calpp" zclass="tooltip" sclass="right tooltip-error cal">
+		<span zclass="tooltip-arrow"/>
+		<label zclass="tooltip-inner" value="2 Important Event"/>
+	</popup>
+</div>
